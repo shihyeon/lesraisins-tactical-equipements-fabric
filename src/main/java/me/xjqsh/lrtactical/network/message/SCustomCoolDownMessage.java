@@ -1,13 +1,15 @@
 package me.xjqsh.lrtactical.network.message;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import me.xjqsh.lrtactical.capability.CustomItemCoolDowns;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.neoforge.network.handling.IPayloadContext;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.network.handling.IPayloadContext;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 
@@ -34,7 +36,7 @@ public record SCustomCoolDownMessage(ResourceLocation id, int duration) implemen
         context.enqueueWork(() -> handle(message));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     private static void handle(SCustomCoolDownMessage message) {
         Player player = Minecraft.getInstance().player;
         if (player == null) {

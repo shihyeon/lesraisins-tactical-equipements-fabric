@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "id": "lrtactical",
+  "version": "${version}",
+  "name": "LesRaisins Tactical Equipments",
+  "description": "An addon for TaCZ with tactical equipment, melee weapons and consumables.",
+  "authors": [
+    "LesRaisins Studio"
+  ],
+  "contributors": [
+    "Shihyeon (Fabric port)"
+  ],
+  "contact": {
+    "sources": "https://github.com/LesRaisins-Studios/LesRaisins-Tactical-Equipements"
+  },
+  "license": "GPL-3.0-only",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "kr.shihyeon.mods.lrtactical.LrTacticalFabric"
+    ],
+    "client": [
+      "kr.shihyeon.mods.lrtactical.LrTacticalFabricClient"
+    ],
+    "modmenu": [
+      "kr.shihyeon.mods.lrtactical.compat.modmenu.ModMenuApiImpl"
+    ],
+    "jei_mod_plugin": [
+      "me.xjqsh.lrtactical.compat.jei.LrJeiPlugin"
+    ]
+  },
+  "mixins": [
+    "lrtactical.mixins.json",
+    "lrtactical.fabric.mixins.json"
+  ],
+  "accessWidener": "lrtactical.accesswidener",
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "forgeconfigapiport": "*",
+    "tacz": ">=1.0.0-neo1.2.0"
+  },
+  "suggests": {
+    "playeranimator": ">=2.0.1",
+    "cloth-config": "*"
+  },
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/class_1297": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/attachment/IAttachmentHolder"
+      ],
+      "net/minecraft/class_1792": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/common/extensions/IItemExtension"
+      ],
+      "net/minecraft/class_1792$class_1793": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/common/extensions/IItemPropertiesExtension"
+      ],
+      "net/minecraft/class_1799": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/common/extensions/IItemStackExtension"
+      ],
+      "net/minecraft/class_2248": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/common/extensions/IBlockExtension"
+      ],
+      "net/minecraft/class_1291": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/common/extensions/IMobEffectExtension"
+      ],
+      "net/minecraft/class_1761$class_7913": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/common/extensions/ICreativeModeTabBuilderExtension"
+      ],
+      "net/minecraft/class_304": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/client/extensions/IKeyMappingExtension"
+      ],
+      "net/minecraft/class_1299$class_1300": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/common/extensions/IEntityTypeBuilderExtension<TT;>"
+      ],
+      "net/minecraft/class_4174$class_4175": [
+        "kr/shihyeon/mods/lrtactical/neoforged/neoforge/common/extensions/IFoodPropertiesBuilderExtension"
+      ]
+    }
+  }
+}

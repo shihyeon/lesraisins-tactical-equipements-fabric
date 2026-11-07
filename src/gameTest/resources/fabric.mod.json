@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "lrtactical-gametest",
+  "version": "1.0.0",
+  "name": "LesRaisins Tactical Equipments GameTests",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-gametest": [
+      "me.xjqsh.lrtactical.MigrationGameTests",
+      "me.xjqsh.lrtactical.StackComponentGameTests"
+    ]
+  },
+  "depends": {
+    "lrtactical": "*"
+  }
+}

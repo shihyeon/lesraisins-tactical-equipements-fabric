@@ -5,9 +5,9 @@ import me.xjqsh.lrtactical.capability.CombatProperties;
 import me.xjqsh.lrtactical.capability.CustomItemCoolDowns;
 
 import net.minecraft.world.entity.player.Player;
-import net.neoforged.neoforge.attachment.AttachmentType;
-import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.attachment.AttachmentType;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredRegister;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import java.util.function.Supplier;
 

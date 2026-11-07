@@ -5,8 +5,8 @@ import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import me.xjqsh.lrtactical.compat.cloth.client.BasicClothConfig;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
-import net.neoforged.fml.ModList;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.ModList;
 
 import javax.annotation.Nullable;
 

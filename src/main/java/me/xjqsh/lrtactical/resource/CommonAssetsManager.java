@@ -21,11 +21,11 @@ import me.xjqsh.lrtactical.resource.serializer.ParticleOptionsDeserializer;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.PreparableReloadListener;
-import net.neoforged.neoforge.event.AddReloadListenerEvent;
-import net.neoforged.neoforge.event.OnDatapackSyncEvent;
-import net.neoforged.neoforge.event.server.ServerStoppedEvent;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.event.AddReloadListenerEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.event.OnDatapackSyncEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.event.server.ServerStoppedEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
 
 import java.util.Collection;
 import java.util.Map;

@@ -1,16 +1,18 @@
 package me.xjqsh.lrtactical.api.event;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import me.xjqsh.lrtactical.api.melee.MeleeAction;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.bus.api.Event;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.Event;
 
 import javax.annotation.Nullable;
 
-@OnlyIn(Dist.CLIENT)
+@Environment(EnvType.CLIENT)
 public class MeleePreAttackEvent extends Event {
     private final int playerId;
     private final MeleeAction state;

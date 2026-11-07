@@ -10,8 +10,8 @@ import net.minecraft.client.gui.screens.ConfirmLinkScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
-import net.neoforged.fml.ModList;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.ModList;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 

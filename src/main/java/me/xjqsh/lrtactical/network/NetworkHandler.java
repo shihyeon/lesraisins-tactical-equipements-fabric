@@ -9,11 +9,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.network.PacketDistributor;
-import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.network.registration.PayloadRegistrar;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.network.PacketDistributor;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.network.registration.PayloadRegistrar;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class NetworkHandler {

@@ -1,16 +1,18 @@
 package me.xjqsh.lrtactical.compat.player_animator;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import me.xjqsh.lrtactical.api.LrTacticalAPI;
 import me.xjqsh.lrtactical.api.event.MeleePreAttackEvent;
 import me.xjqsh.lrtactical.api.melee.MeleeAction;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
 
-@OnlyIn(Dist.CLIENT)
+@Environment(EnvType.CLIENT)
 public class MeleeAnimationListener {
 
     @SubscribeEvent

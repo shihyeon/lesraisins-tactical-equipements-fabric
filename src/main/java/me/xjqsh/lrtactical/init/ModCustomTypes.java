@@ -15,8 +15,8 @@ import me.xjqsh.lrtactical.item.throwable.flash.StunThrowableData;
 import me.xjqsh.lrtactical.item.throwable.flash.StunType;
 import me.xjqsh.lrtactical.item.throwable.smoke.SmokeType;
 import me.xjqsh.lrtactical.resource.CommonAssetsManager;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredHolder;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModCustomTypes {
     // 投掷物类型

@@ -4,9 +4,9 @@ import me.xjqsh.lrtactical.EquipmentMod;
 import me.xjqsh.lrtactical.effect.BurnedEffect;
 import me.xjqsh.lrtactical.effect.HarmfulEffect;
 import net.minecraft.world.effect.MobEffect;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredHolder;
 
 public class ModEffects {
     public static final DeferredRegister<MobEffect> EFFECTS =

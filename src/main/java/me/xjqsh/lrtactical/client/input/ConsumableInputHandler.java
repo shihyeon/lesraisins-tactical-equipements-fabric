@@ -10,10 +10,10 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.neoforge.client.event.InputEvent;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.InputEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
 import org.lwjgl.glfw.GLFW;
 
 @EventBusSubscriber(value = Dist.CLIENT, modid = EquipmentMod.MOD_ID)

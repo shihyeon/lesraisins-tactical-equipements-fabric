@@ -3,9 +3,9 @@ package me.xjqsh.lrtactical.handler;
 import me.xjqsh.lrtactical.EquipmentMod;
 import me.xjqsh.lrtactical.api.LrTacticalAPI;
 
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.ItemAttributeModifierEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.event.ItemAttributeModifierEvent;
 
 @EventBusSubscriber(modid = EquipmentMod.MOD_ID)
 public final class ItemAttributesHandler {

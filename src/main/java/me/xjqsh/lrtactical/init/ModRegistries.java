@@ -7,10 +7,10 @@ import me.xjqsh.lrtactical.item.throwable.ThrowableType;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.registries.NewRegistryEvent;
-import net.neoforged.neoforge.registries.RegistryBuilder;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.NewRegistryEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.RegistryBuilder;
 
 @EventBusSubscriber(modid = EquipmentMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class ModRegistries {

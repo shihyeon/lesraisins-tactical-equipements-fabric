@@ -20,9 +20,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.neoforge.common.ItemAbility;
-import net.neoforged.neoforge.common.ItemAbilities;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.common.ItemAbility;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.common.ItemAbilities;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

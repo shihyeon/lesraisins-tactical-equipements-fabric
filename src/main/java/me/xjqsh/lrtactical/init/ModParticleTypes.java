@@ -3,9 +3,9 @@ package me.xjqsh.lrtactical.init;
 import me.xjqsh.lrtactical.EquipmentMod;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredHolder;
 
 public class ModParticleTypes {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES =

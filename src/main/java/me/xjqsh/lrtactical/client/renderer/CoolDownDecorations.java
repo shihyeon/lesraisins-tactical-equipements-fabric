@@ -9,7 +9,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.client.IItemDecorator;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.IItemDecorator;
 
 public class CoolDownDecorations implements IItemDecorator {
     @Override

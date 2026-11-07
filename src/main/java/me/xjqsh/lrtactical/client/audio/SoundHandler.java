@@ -14,9 +14,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.neoforged.neoforge.client.event.sound.PlaySoundEvent;
-import net.neoforged.neoforge.client.event.ClientTickEvent;
-import net.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.sound.PlaySoundEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.ClientTickEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
 
 import javax.annotation.Nullable;
 

@@ -19,8 +19,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.GameType;
-import net.neoforged.neoforge.gametest.GameTestHolder;
-import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.gametest.GameTestHolder;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
 
 @GameTestHolder(EquipmentMod.MOD_ID)

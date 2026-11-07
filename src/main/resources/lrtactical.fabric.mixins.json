@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "kr.shihyeon.mods.lrtactical.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "common.EnchantmentHelperMixin",
+    "common.ItemStackHooksMixin",
+    "common.LivingEntityHooksMixin",
+    "common.MilkBucketItemMixin",
+    "common.MobEffectInstanceMixin",
+    "common.PlayerHooksMixin",
+    "extension.BlockMixin",
+    "extension.CreativeModeTabBuilderMixin",
+    "extension.EntityAttachmentMixin",
+    "extension.EntityTypeBuilderMixin",
+    "extension.FoodPropertiesBuilderMixin",
+    "extension.ItemMixin",
+    "extension.ItemPropertiesMixin",
+    "extension.MobEffectMixin"
+  ],
+  "client": [
+    "client.GuiGraphicsMixin",
+    "client.KeyMappingMixin",
+    "client.PlayerRendererMixin",
+    "client.SoundEngineMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

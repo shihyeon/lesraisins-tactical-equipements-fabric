@@ -14,7 +14,7 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.event.EventHooks;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.event.EventHooks;
 
 public class GrenadeEntity extends ThrowableItemEntity {
     public static EntityType<GrenadeEntity> TYPE = EntityType.Builder.<GrenadeEntity>of(GrenadeEntity::new, MobCategory.MISC)

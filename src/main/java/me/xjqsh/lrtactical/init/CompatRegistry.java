@@ -1,6 +1,6 @@
 package me.xjqsh.lrtactical.init;
 
-import net.neoforged.fml.ModList;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.ModList;
 
 public final class CompatRegistry {
     public static final String CLOTH_CONFIG = "cloth_config";

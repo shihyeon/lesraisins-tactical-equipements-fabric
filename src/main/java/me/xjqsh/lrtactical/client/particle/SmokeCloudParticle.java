@@ -1,5 +1,7 @@
 package me.xjqsh.lrtactical.client.particle;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Camera;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -8,10 +10,10 @@ import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
+@Environment(EnvType.CLIENT)
 public class SmokeCloudParticle extends TextureSheetParticle {
     public static SmokeCloudParticleProvider provider(SpriteSet spriteSet) {
         return new SmokeCloudParticleProvider(spriteSet);

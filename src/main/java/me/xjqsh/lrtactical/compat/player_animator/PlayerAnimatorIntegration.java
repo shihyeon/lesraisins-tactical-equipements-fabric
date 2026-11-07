@@ -15,7 +15,7 @@ import me.xjqsh.lrtactical.EquipmentMod;
 import me.xjqsh.lrtactical.util.IPAAssetManager;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.common.NeoForge;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.common.NeoForge;
 import org.jetbrains.annotations.NotNull;
 
 public class PlayerAnimatorIntegration {

@@ -4,11 +4,11 @@ import me.xjqsh.lrtactical.config.ClientConfig;
 import me.xjqsh.lrtactical.config.CommonConfig;
 import me.xjqsh.lrtactical.config.ServerConfig;
 import me.xjqsh.lrtactical.init.*;
-import net.neoforged.bus.api.IEventBus;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.IEventBus;
 
-import net.neoforged.fml.common.Mod;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.ModContainer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,5 +1,7 @@
 package me.xjqsh.lrtactical.item;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import com.tacz.guns.api.item.IAnimationItem;
 import com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer;
 import me.xjqsh.lrtactical.api.item.IThrowable;
@@ -19,9 +21,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -78,7 +80,7 @@ public class ThrowableItem extends Item implements IAnimationItem, IThrowable {
         });
     }
 
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void triggerAnimation(ItemStack stack, String animationName) {
         if (IClientItemExtensions.of(stack.getItem()).getCustomRenderer() instanceof AnimateGeoItemRenderer<?, ?> renderer) {
             renderer.triggerAnimation(stack, animationName);

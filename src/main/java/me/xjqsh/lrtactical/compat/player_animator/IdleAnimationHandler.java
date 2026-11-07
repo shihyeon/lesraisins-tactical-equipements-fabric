@@ -1,5 +1,7 @@
 package me.xjqsh.lrtactical.compat.player_animator;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import me.xjqsh.lrtactical.api.LrTacticalAPI;
 import me.xjqsh.lrtactical.api.item.IMeleeWeapon;
 import me.xjqsh.lrtactical.client.resource.display.MeleeDisplayInstance;
@@ -9,13 +11,13 @@ import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.neoforge.client.event.RenderFrameEvent;
-import net.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.RenderFrameEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
 import org.jetbrains.annotations.NotNull;
 
-@OnlyIn(Dist.CLIENT)
+@Environment(EnvType.CLIENT)
 public class IdleAnimationHandler {
 
     @SubscribeEvent

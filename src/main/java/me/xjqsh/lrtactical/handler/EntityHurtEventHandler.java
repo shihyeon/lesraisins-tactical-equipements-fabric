@@ -3,9 +3,9 @@ package me.xjqsh.lrtactical.handler;
 import me.xjqsh.lrtactical.EquipmentMod;
 import me.xjqsh.lrtactical.init.ModEffects;
 import net.minecraft.tags.DamageTypeTags;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
 
 @EventBusSubscriber(modid = EquipmentMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class EntityHurtEventHandler {

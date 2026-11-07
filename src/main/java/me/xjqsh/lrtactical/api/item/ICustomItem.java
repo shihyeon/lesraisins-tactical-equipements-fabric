@@ -4,7 +4,7 @@ import me.xjqsh.lrtactical.api.melee.MeleeAction;
 import me.xjqsh.lrtactical.capability.CustomItemCoolDowns;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.client.event.InputEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.InputEvent;
 
 import java.util.Optional;
 

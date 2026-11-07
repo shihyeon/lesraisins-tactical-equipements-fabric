@@ -4,9 +4,9 @@ import me.xjqsh.lrtactical.EquipmentMod;
 import me.xjqsh.lrtactical.entity.*;
 import me.xjqsh.lrtactical.entity.sp.SpEffectCloudEntity;
 import net.minecraft.world.entity.EntityType;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredHolder;
 
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =

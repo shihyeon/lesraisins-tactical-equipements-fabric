@@ -23,15 +23,15 @@ import me.xjqsh.lrtactical.compat.cloth.MenuIntegration;
 import me.xjqsh.lrtactical.compat.player_animator.PlayerAnimatorHelper;
 import me.xjqsh.lrtactical.init.CompatRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.neoforge.client.event.*;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.*;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.common.NeoForge;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.gui.VanillaGuiLayers;
 
 @EventBusSubscriber(value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD, modid = EquipmentMod.MOD_ID)
 public class ClientSetupHandler {

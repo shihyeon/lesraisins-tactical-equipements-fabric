@@ -1,5 +1,7 @@
 package me.xjqsh.lrtactical.api;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import me.xjqsh.lrtactical.api.item.IConsumable;
 import me.xjqsh.lrtactical.api.item.IMeleeWeapon;
 import me.xjqsh.lrtactical.api.item.IThrowable;
@@ -13,14 +15,14 @@ import me.xjqsh.lrtactical.item.index.ThrowableIndex;
 import me.xjqsh.lrtactical.resource.CommonAssetsManager;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
 
 import java.util.Collection;
 import java.util.Optional;
 
 public class LrTacticalAPI {
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public static Optional<ConsumableDisplayInstance> getConsumableDisplay(ItemStack stack) {
         if (!(stack.getItem() instanceof IConsumable item)) {
             return Optional.empty();
@@ -34,12 +36,12 @@ public class LrTacticalAPI {
         return Optional.ofNullable(LrClientAssetsManager.INSTANCE.getConsumableDisplay(item.getId(stack)));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public static Optional<ConsumableDisplayInstance> getConsumableDisplay(ResourceLocation id) {
         return Optional.ofNullable(LrClientAssetsManager.INSTANCE.getConsumableDisplay(id));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public static Optional<ThrowableDisplayInstance> getThrowableDisplay(ItemStack stack) {
         if (!(stack.getItem() instanceof IThrowable item)) {
             return Optional.empty();
@@ -53,12 +55,12 @@ public class LrTacticalAPI {
         return Optional.ofNullable(LrClientAssetsManager.INSTANCE.getThrowableDisplay(item.getId(stack)));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public static Optional<ThrowableDisplayInstance> getThrowableDisplay(ResourceLocation id) {
         return Optional.ofNullable(LrClientAssetsManager.INSTANCE.getThrowableDisplay(id));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public static Optional<MeleeDisplayInstance> getMeleeDisplay(ItemStack stack) {
         if (!(stack.getItem() instanceof IMeleeWeapon item)) {
             return Optional.empty();
@@ -72,7 +74,7 @@ public class LrTacticalAPI {
         return Optional.ofNullable(LrClientAssetsManager.INSTANCE.getMeleeDisplay(item.getId(stack)));
     }
 
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public static Optional<MeleeDisplayInstance> getMeleeDisplay(ResourceLocation index) {
         return Optional.ofNullable(LrClientAssetsManager.INSTANCE.getMeleeDisplay(index));
     }

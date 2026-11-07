@@ -1,5 +1,7 @@
 package me.xjqsh.lrtactical.client.input;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import com.mojang.blaze3d.platform.InputConstants;
 import com.tacz.guns.client.renderer.item.AnimateGeoItemRenderer;
 import me.xjqsh.lrtactical.api.melee.MeleeAction;
@@ -9,30 +11,26 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.neoforge.client.event.InputEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.neoforge.client.settings.KeyConflictContext;
-import net.neoforged.neoforge.client.settings.KeyModifier;
-import net.neoforged.neoforge.client.event.ClientTickEvent;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.InputEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.settings.KeyConflictContext;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.settings.KeyModifier;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.ClientTickEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
 import org.lwjgl.glfw.GLFW;
 
-@OnlyIn(Dist.CLIENT)
+@Environment(EnvType.CLIENT)
 @EventBusSubscriber(value = Dist.CLIENT)
 public class AttackKeys {
     public static final KeyMapping NORMAL_ATTACK = new KeyMapping("key.lrtactical.normal_attack.desc",
-            KeyConflictContext.IN_GAME,
-            KeyModifier.NONE,
             InputConstants.Type.MOUSE,
             GLFW.GLFW_MOUSE_BUTTON_LEFT,
             "key.category.lrtactical");
 
     public static final KeyMapping SPECIAL_ATTACK = new KeyMapping("key.lrtactical.sp_attack.desc",
-            KeyConflictContext.IN_GAME,
-            KeyModifier.NONE,
             InputConstants.Type.MOUSE,
             GLFW.GLFW_MOUSE_BUTTON_RIGHT,
             "key.category.lrtactical");

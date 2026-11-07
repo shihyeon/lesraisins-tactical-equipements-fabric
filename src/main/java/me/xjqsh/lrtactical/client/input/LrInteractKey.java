@@ -1,5 +1,7 @@
 package me.xjqsh.lrtactical.client.input;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import com.mojang.blaze3d.platform.InputConstants;
 import com.tacz.guns.client.input.InteractKey;
 import com.tacz.guns.config.util.InteractKeyConfigRead;
@@ -12,16 +14,16 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.neoforge.client.event.InputEvent;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.InputEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
 import org.lwjgl.glfw.GLFW;
 
 import static com.tacz.guns.util.InputExtraCheck.isInGame;
 
-@OnlyIn(Dist.CLIENT)
+@Environment(EnvType.CLIENT)
 @EventBusSubscriber(value = Dist.CLIENT)
 public class LrInteractKey {
     @SubscribeEvent

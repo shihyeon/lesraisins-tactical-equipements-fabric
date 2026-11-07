@@ -1,5 +1,7 @@
 package me.xjqsh.lrtactical.client.resource;
 
+import net.fabricmc.api.Environment;
+import net.fabricmc.api.EnvType;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import me.xjqsh.lrtactical.EquipmentMod;
@@ -15,18 +17,18 @@ import net.minecraft.client.renderer.block.model.ItemTransform;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.PreparableReloadListener;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.bus.api.EventPriority;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.Dist;
+import kr.shihyeon.mods.lrtactical.neoforged.api.distmarker.OnlyIn;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.EventPriority;
+import kr.shihyeon.mods.lrtactical.neoforged.bus.api.SubscribeEvent;
+import kr.shihyeon.mods.lrtactical.neoforged.fml.common.EventBusSubscriber;
 import org.joml.Vector3f;
 
 import java.util.function.Consumer;
 
-@OnlyIn(Dist.CLIENT)
+@Environment(EnvType.CLIENT)
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT, modid = EquipmentMod.MOD_ID)
 public enum LrClientAssetsManager {
     INSTANCE;

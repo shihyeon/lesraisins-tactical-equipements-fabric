@@ -1,5 +1,6 @@
 package me.xjqsh.lrtactical.init;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import me.xjqsh.lrtactical.EquipmentMod;
 import me.xjqsh.lrtactical.api.LrTacticalAPI;
 import me.xjqsh.lrtactical.api.index.ICustomItemIndex;
@@ -13,9 +14,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -35,14 +36,14 @@ public class ModItems {
 
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EquipmentMod.MOD_ID);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> THROWABLE_TAB = TABS.register("throwable",
-            () -> CreativeModeTab.builder()
+            () -> FabricItemGroup.builder()
                     .title(Component.translatable("item_group.lrtactical.throwable"))
                     .icon(ModItems::getThrowableIcon)
                     .displayItems(ModItems::fillThrowables)
                     .build()
     );
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CONSUMABLE_TAB = TABS.register("consumable",
-            () -> CreativeModeTab.builder()
+            () -> FabricItemGroup.builder()
                     .title(Component.translatable("item_group.lrtactical.consumable"))
                     .icon(ModItems::getConsumableIcon)
                     .displayItems(ModItems::fillConsumables)
@@ -50,7 +51,7 @@ public class ModItems {
                     .build()
     );
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MELEE_TAB = TABS.register("melee",
-            () -> CreativeModeTab.builder()
+            () -> FabricItemGroup.builder()
                     .title(Component.translatable("item_group.lrtactical.melee"))
                     .icon(ModItems::getMeleeIcon)
                     .displayItems(ModItems::fillMeleeWeapons)

@@ -11,7 +11,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.neoforged.neoforge.common.util.AttributeUtil;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.common.util.AttributeUtil;
 
 import java.util.ArrayList;
 import java.util.List;

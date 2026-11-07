@@ -28,7 +28,7 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.*;
-import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
+import kr.shihyeon.mods.lrtactical.neoforged.neoforge.entity.IEntityWithComplexSpawn;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
