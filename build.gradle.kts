@@ -1,11 +1,18 @@
+import me.modmuss50.mpp.PublishModTask
 import java.util.zip.ZipFile
 
 object BuildConfig {
     val JAVA_VERSION: Int = 21
 
     val MOD_ID: String = "lrtactical"
+    val MOD_NAME: String = "LesRaisins Tactical Equipments"
+
     val MOD_VERSION: String = "0.1.0"
     val UPSTREAM_VERSION: String = "0.4.4"
+
+    val GITHUB_REPOSITORY: String = "shihyeon/shihyeon-lesraisins-tactical-equipements-fabric"
+    val MODRINTH_PROJECT_ID: String? = "eaw857pg"
+    val CURSEFORGE_PROJECT_ID: String? = "1820599"
 
     val MINECRAFT_VERSION: String = "1.21.1"
     val PARCHMENT_VERSION: String = "2024.11.17"
@@ -24,6 +31,7 @@ object BuildConfig {
 plugins {
     id("java-library")
     id("net.fabricmc.fabric-loom-remap") version ("1.17.+")
+    id("me.modmuss50.mod-publish-plugin") version ("2.2.0")
 }
 
 base {
@@ -203,6 +211,79 @@ java {
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
     options.release.set(BuildConfig.JAVA_VERSION)
+}
+
+fun env(name: String, default: String): String = providers.environmentVariable(name).orElse(default).get()
+
+fun envFlag(name: String, default: Boolean): Boolean = env(name, default.toString()).toBoolean()
+
+fun <T> envChoice(name: String, default: String, options: Map<String, T>): T {
+    val value = env(name, default)
+    return options[value] ?: error("Unknown $name: $value")
+}
+
+publishMods {
+    dryRun = providers.gradleProperty("publishDryRun").isPresent
+
+    file = tasks.remapJar.flatMap { it.archiveFile }
+    changelog = env("CHANGELOG_TEXT", "").ifEmpty {
+        providers.fileContents(layout.projectDirectory.file("changelog.md")).asText.get()
+    }
+    type = when (env("VERSION_TYPE", "release")) {
+        "alpha" -> ALPHA
+        "beta" -> BETA
+        else -> STABLE
+    }
+    modLoaders.add("fabric")
+    displayName = "${BuildConfig.MOD_NAME} ${BuildConfig.MOD_VERSION} (LRT ${BuildConfig.UPSTREAM_VERSION}) for Fabric ${BuildConfig.MINECRAFT_VERSION}"
+
+    if (!envFlag("PUBLISH_ENABLED", true)) {
+        println("Publishing is disabled. Set PUBLISH_ENABLED=true to enable.")
+        return@publishMods
+    }
+
+    val (modrinthEnabled, curseforgeEnabled) = envChoice("PUBLISH_PLATFORM", "all", mapOf(
+        "all" to (true to true),
+        "modrinth" to (true to false),
+        "curseforge" to (false to true),
+        "github" to (false to false),
+    ))
+
+    val modrinthProjectId = BuildConfig.MODRINTH_PROJECT_ID
+    if (modrinthEnabled && modrinthProjectId != null) {
+        modrinth {
+            accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+            projectId = modrinthProjectId
+            minecraftVersions.add(BuildConfig.MINECRAFT_VERSION)
+            requires("fabric-api", "forge-config-api-port", "tacz-refabricated")
+            optional("cloth-config", "modmenu", "playeranimator", "jei")
+        }
+    }
+
+    val curseforgeProjectId = BuildConfig.CURSEFORGE_PROJECT_ID
+    if (curseforgeEnabled && curseforgeProjectId != null) {
+        curseforge {
+            accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+            projectId = curseforgeProjectId
+            minecraftVersions.add(BuildConfig.MINECRAFT_VERSION)
+            javaVersions.add(JavaVersion.toVersion(BuildConfig.JAVA_VERSION))
+            client = true
+            server = true
+            requires("fabric-api", "forge-config-api-port-fabric")
+            optional("cloth-config", "modmenu", "playeranimator", "jei")
+        }
+    }
+
+    github {
+        accessToken = providers.environmentVariable("GITHUB_TOKEN")
+        repository = BuildConfig.GITHUB_REPOSITORY
+        commitish = providers.environmentVariable("GITHUB_SHA").orElse("fabric/${BuildConfig.MINECRAFT_VERSION}")
+        tagName = project.version.toString()
+    }
+}
+
+tasks.withType<PublishModTask>().matching { it.platform.name == "github" }.configureEach {
+    mustRunAfter(tasks.withType<PublishModTask>().matching { it.platform.name != "github" })
 }
 
 /**
