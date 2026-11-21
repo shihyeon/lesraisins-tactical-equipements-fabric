@@ -10,7 +10,7 @@ object BuildConfig {
     val MOD_VERSION: String = "0.1.0"
     val UPSTREAM_VERSION: String = "0.4.4"
 
-    val GITHUB_REPOSITORY: String = "shihyeon/shihyeon-lesraisins-tactical-equipements-fabric"
+    val GITHUB_REPOSITORY: String = "shihyeon/lesraisins-tactical-equipements-fabric"
     val MODRINTH_PROJECT_ID: String? = "eaw857pg"
     val CURSEFORGE_PROJECT_ID: String? = "1820599"
 
