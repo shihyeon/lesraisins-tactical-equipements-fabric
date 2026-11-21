@@ -4,7 +4,8 @@ object BuildConfig {
     val JAVA_VERSION: Int = 21
 
     val MOD_ID: String = "lrtactical"
-    val MOD_VERSION: String = "0.4.4"
+    val MOD_VERSION: String = "0.1.0"
+    val UPSTREAM_VERSION: String = "0.4.4"
 
     val MINECRAFT_VERSION: String = "1.21.1"
     val PARCHMENT_VERSION: String = "2024.11.17"
@@ -26,11 +27,11 @@ plugins {
 }
 
 base {
-    archivesName = "${BuildConfig.MOD_ID}-fabric-${BuildConfig.MINECRAFT_VERSION}"
+    archivesName = "${BuildConfig.MOD_ID}-fabric"
 }
 
 group = "me.xjqsh"
-version = BuildConfig.MOD_VERSION
+version = "${BuildConfig.MOD_VERSION}-${BuildConfig.UPSTREAM_VERSION}+mc${BuildConfig.MINECRAFT_VERSION}"
 
 val gameTest: SourceSet by sourceSets.creating {
     compileClasspath += sourceSets.main.get().compileClasspath + sourceSets.main.get().output
