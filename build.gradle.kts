@@ -235,7 +235,7 @@ publishMods {
         else -> STABLE
     }
     modLoaders.add("fabric")
-    displayName = "${BuildConfig.MOD_NAME} ${BuildConfig.MOD_VERSION} (LRT ${BuildConfig.UPSTREAM_VERSION}) for Fabric ${BuildConfig.MINECRAFT_VERSION}"
+    displayName = "${BuildConfig.MOD_NAME} ${BuildConfig.MOD_VERSION}-${BuildConfig.UPSTREAM_VERSION} for Fabric ${BuildConfig.MINECRAFT_VERSION}"
 
     if (!envFlag("PUBLISH_ENABLED", true)) {
         println("Publishing is disabled. Set PUBLISH_ENABLED=true to enable.")
@@ -269,7 +269,7 @@ publishMods {
             javaVersions.add(JavaVersion.toVersion(BuildConfig.JAVA_VERSION))
             client = true
             server = true
-            requires("fabric-api", "forge-config-api-port-fabric")
+            requires("fabric-api", "forge-config-api-port", "tacz-refabricated")
             optional("cloth-config", "modmenu", "playeranimator", "jei")
         }
     }
